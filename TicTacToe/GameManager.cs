@@ -66,6 +66,7 @@
             for (i = 0; i < field.Length; i++)
             {
                 curSize = 0;
+                point = null;
                 for (j = 0; j < field.Length; j++)
                     if (CheckField(i, j, ref point, ref curSize)) return;
             }
@@ -74,6 +75,7 @@
             for (j = 0; j < field.Length; j++)
             {
                 curSize = 0;
+                point = null;
                 for (i = 0; i < field.Length; i++)
                    if( CheckField(i, j, ref point, ref curSize)) return;
             }
@@ -82,6 +84,7 @@
             for (j = WinSize - 1; j < field.Length; j++)
             {
                 curSize = 0;
+                point = null;
                 for (i = 0, k = j; i < field.Length && k >= 0; i++, k--)
                     if(CheckField(i, k, ref point, ref curSize)) return;
             }
@@ -90,6 +93,7 @@
             for (i = 1; i <= lMinusW; i++)
             {
                 curSize = 0;
+                point = null;
                 for (j = fieldLastIndex, k = i; j >= 0 && k <= fieldLastIndex; j--, k++)
                     if(CheckField(k, j, ref point, ref curSize)) return;
             }
@@ -98,6 +102,7 @@
             for (j = fieldLastIndex; j >= 0; j--)
             {
                 curSize = 0;
+                point = null;
                 for (i = 0, k = j; i < field.Length && k < field.Length; i++, k++)
                     if(CheckField(i, k, ref point, ref curSize)) return;
             }
@@ -106,6 +111,7 @@
             for (i = 1; i <= lMinusW; i++)
             {
                 curSize = 0;
+                point = null;
                 for (j = 0, k = i; j <= fieldLastIndex && k <= fieldLastIndex; j++, k++)
                     if(CheckField(k, j, ref point, ref curSize)) return;
             }
